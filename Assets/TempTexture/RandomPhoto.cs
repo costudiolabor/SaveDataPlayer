@@ -5,7 +5,7 @@ public class RandomPhoto : MonoBehaviour {
     [SerializeField] private RawImage image;
     [SerializeField] private Texture2D[] textures;
 
-    void Start() {
+    void OnEnable() {
         int index = Random.Range(0, textures.Length);
         image.texture = textures[index];
     }
